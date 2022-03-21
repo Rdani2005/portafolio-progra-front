@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+:root {
+    --main-color: #1c1c1c;
+    --secundary-color: #302A18;
+    --title-color: #fde4c3;
+    --text-color: #f6f6f6;
+    --normal-font: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--normal-font);
+}
+
+.bg-dark {
+    background: linear-gradient(45deg, var(--secundary-color), var(--main-color));
+    color: var(--text-color);
+}
+
+.title-text {
+    color: var(--title-color);
+}
+
+.white-text {
+    color: var(--text-color)
+}
+
+.vh-100 {
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: var(--text-color)
+
+}
+
+.glass {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
