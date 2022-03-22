@@ -2,6 +2,7 @@ import React from 'react'
 
 import Cards from '../components/Cards'
 
+import { DirectasData } from '../components/DirectasData'
 const Directas = () => {
     return (
         <main className="d-flex justify-content-center align-items-center flex-column p-5 bg-dark text-center">
@@ -11,49 +12,19 @@ const Directas = () => {
             </section>
             <section className="container mt-5">
                 <div className="row">
-                    <Cards
-                        imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
-                        titulo="Enunciado Cotidianos"
-                        contenido="Aqui veremos todos los enunciados de los cotidianos!"
-                        link="/"
-                    />
-                    <Cards
-                        imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
-                        titulo="Cotidianos Desarrollados"
-                        contenido="Aqui veremos todos los cotidianos realizados!"
-                        link="/"
-                    />
-
-                    <Cards
-                        imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
-                        titulo="Enunciado de Tareas"
-                        contenido="Aqui veremos todos los enunciados de las tareas!"
-                        link="/"
-                    />
-                    <Cards
-                        imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
-                        titulo="Tareas realizadas"
-                        contenido="Aqui veremos todas las tareas realizadas"
-                        link="/"
-                    />
-                    <Cards
-                        imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
-                        titulo="Enunciado del Proyecto"
-                        contenido="Aqui el enunciado del proyecto!"
-                        link="/"
-                    />
-                    <Cards
-                        imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
-                        titulo="Proyecto Realizado"
-                        contenido="Aqui veremos el proyecto realizado!"
-                        link="/"
-                    />
-                    <Cards
-                        imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
-                        titulo="Codigos Ejemplo"
-                        contenido="Aqui veremos todos codigos entregados por el profesor!"
-                        link="/"
-                    />
+                    {
+                        DirectasData.map((directa, index) => {
+                            return (
+                                <Cards
+                                    key={index}
+                                    imagen={directa.imagen}
+                                    titulo={directa.titulo}
+                                    contenido={directa.contenido}
+                                    link={directa.link}
+                                />
+                            )
+                        })
+                    }
                 </div>
             </section>
         </main>
