@@ -32,7 +32,7 @@ const EnunciadosCotidianos = () => {
                 imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
                 titulo={cotidiano.titulo}
                 contenido={cotidiano.descripcion}
-                link="/"
+                link={`/enunciados/enunciado/${cotidiano.id}`}
               />
             )
           })}

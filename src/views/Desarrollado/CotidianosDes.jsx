@@ -15,7 +15,6 @@ const CotidianosDes = () => {
 
     useEffect(() => { getData() }, [])
 
-
     return (
         <main className="d-flex justify-content-center align-items-center flex-column p-5 bg-dark text-center min-vh-100">
             <h1 className="display-1 mt-5">Cotidianos Desarrollados</h1>
@@ -31,7 +30,7 @@ const CotidianosDes = () => {
                                 imagen={cotidiano.direccion_imagen}
                                 titulo={cotidiano.titulo}
                                 contenido={cotidiano.descripcion}
-                                link="/"
+                                link={`/desarrollados/desarrollado/${cotidiano.id}`}
                             />
                         )
                     })}

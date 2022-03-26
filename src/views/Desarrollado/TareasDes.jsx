@@ -31,7 +31,7 @@ const TareasDes = () => {
                                 imagen={tarea.direccion_imagen}
                                 titulo={tarea.titulo}
                                 contenido={tarea.descripcion}
-                                link="/"
+                                link={`/desarrollados/desarrollado/${tarea.id}`}
                             />
                         )
                     })}

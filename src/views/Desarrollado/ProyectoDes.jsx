@@ -29,7 +29,7 @@ const ProyectoDes = () => {
                                 imagen={proyecto.direccion_imagen}
                                 titulo={proyecto.titulo}
                                 contenido={proyecto.descripcion}
-                                link="/"
+                                link={`/desarrollados/desarrollado/${proyecto.id}`}
                             />
                         )
                     })}

@@ -30,7 +30,7 @@ const EnunciadoTareas = () => {
                                 imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
                                 titulo={tarea.titulo}
                                 contenido={tarea.descripcion}
-                                link="/"
+                                link={`/enunciados/enunciado/${tarea.id}`}
                             />
                         )
                     })}
