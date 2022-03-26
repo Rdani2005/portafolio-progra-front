@@ -17,7 +17,7 @@ const EnunciadosView = () => {
 
     useEffect(() => {
         getData()
-    }, [id])
+    }, [id]) // eslint-disable-next-line
 
     return (
         <main className="d-flex justify-content-center align-items-center flex-column p-5 bg-dark text-center min-vh-100">
