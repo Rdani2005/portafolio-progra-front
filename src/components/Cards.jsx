@@ -7,7 +7,7 @@ const Cards = ({ imagen, titulo, contenido, link }) => {
 
         <div className="col-lg-4 mb-4">
             <div className="card bg-transparent glass">
-                <img src={imagen} alt={titulo} className="card-img-top" />
+                <img src={imagen} alt={titulo} className="card-img-top w-90 mx-auto rounded-3 mt-3" />
                 <div className="card-body">
 
                     <h5 className="card-title bg-none">
@@ -15,7 +15,7 @@ const Cards = ({ imagen, titulo, contenido, link }) => {
                     </h5>
                     <p className="card-text">{contenido}</p>
                 </div>
-                <Link to={link} className="button w-25 mx-auto">
+                <Link to={link} className="button w-50 mx-auto mb-3">
                     Ver más!
                 </Link>
             </div>
