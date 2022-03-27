@@ -4,24 +4,35 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // ------------------- Components ----------------------------------
 import Navbar from './components/Navbar'
 // --------------------- Views --------------------------------------
+// Main Views
 import Home from './views/Home'
 import Directas from './views/Directas'
 import Indirectas from './views/Indirectas'
-import Clase from './views/Indirectas/Clase'
 import Evaluaciones from './views/Evaluaciones'
-import Temarios from './views/Indirectas/Temarios'
-import Adicional from './views/Indirectas/Adicional'
 import Complementarias from './views/Complementarias'
+// Complementarias
+import Diagnostico from './views/Complementarias/Diagnostico'
+import ComplementView from './views/Complementarias/ComplementView'
+import TrabajoProyecto from './views/Complementarias/TrabajoProyecto'
+// desarrolladas
 import TareasDes from './views/Desarrollado/TareasDes'
 import ProyectoDes from './views/Desarrollado/ProyectoDes'
-import AdicionalView from './views/Indirectas/AdicionalView'
-import EnunciadosView from './views/Enunciados/EnunciadosView'
 import CotidianosDes from './views/Desarrollado/CotidianosDes'
-import EnunciadoTareas from './views/Enunciados/EnunciadoTareas'
 import DesarrolladoView from './views/Desarrollado/DesarrolladoView'
+// Evaluaciones
+import Cotejos from './views/Evaluaciones/Cotejos'
+import Pruebas from './views/Evaluaciones/Pruebas'
+import EvaluacionesViews from './views/Evaluaciones/EvaluacionesViews'
+// indirectas
+import Clase from './views/Indirectas/Clase'
+import Temarios from './views/Indirectas/Temarios'
+import Adicional from './views/Indirectas/Adicional'
+import AdicionalView from './views/Indirectas/AdicionalView'
+// Enunciados
+import EnunciadosView from './views/Enunciados/EnunciadosView'
+import EnunciadoTareas from './views/Enunciados/EnunciadoTareas'
 import EnunciadoProyecto from './views/Enunciados/EnunciadoProyecto'
 import EnunciadosCotidianos from './views/Enunciados/EnunciadosCotidianos'
-
 // CSS
 import './css/app.css'
 
@@ -47,7 +58,6 @@ const App = () => {
                 <Route path="/desarrollados/cotidianos" element={<CotidianosDes />} />
                 {/* ver archivos de evidencias directas */}
                 <Route path="/enunciados/enunciado/:id" element={<EnunciadosView />} />
-                <Route path="/enunciados/enunciado/:id" element={<EnunciadosView />} />
                 <Route path="/desarrollados/desarrollado/:id" element={<DesarrolladoView />} />
                 {/* trabajos de evidencias indirectas */}
                 <Route path='/indirectas/clase' element={<Clase />} />
@@ -55,7 +65,14 @@ const App = () => {
                 <Route path='/indirectas/adicional' element={<Adicional />} />
                 {/* Archivos de evidencias directas */}
                 <Route path='/indirectas/archivo/:id' element={<AdicionalView />} />
-
+                {/* Archivos de evaluaciones y hojas de cotejos */}
+                <Route path='/evaluacion/cotejos' element={<Cotejos />} />
+                <Route path='/evaluacion/pruebas' element={<Pruebas />} />
+                <Route path='/evaluacion/archivo/:id' element={<EvaluacionesViews />} />
+                {/* Archivos y vistas de sección complementaria */}
+                <Route path='/complementos/proyecto' element={<TrabajoProyecto />} />
+                <Route path='/complementos/diagnostico' element={<Diagnostico />} />
+                <Route path='/complementos/archivos/:id' element={<ComplementView />} />
             </Routes>
         </BrowserRouter>
 
