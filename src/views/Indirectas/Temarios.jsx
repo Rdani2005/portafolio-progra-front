@@ -7,7 +7,7 @@ const Temarios = () => {
   let [examenes, setExamenes] = useState([])
 
   let getData = async () => {
-    let res = await axios.get('http://127.0.0.1:8000/api/indirectas/indirectas/')
+    let res = await axios.get('https://portafolio-progra-back.herokuapp.com/api/indirectas/indirectas/')
     let data = res.data
     data = data.filter(dato => dato.tipo_trabajo === "EXAMEN")
     console.log(data);

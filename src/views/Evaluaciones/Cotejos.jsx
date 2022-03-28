@@ -7,7 +7,7 @@ const Cotejos = () => {
   let [cotejos, setCotejos] = useState([])
 
   let getData = async () => {
-    let res = await axios.get('http://127.0.0.1:8000/api/evaluaciones/evaluaciones/')
+    let res = await axios.get('https://portafolio-progra-back.herokuapp.com/api/evaluaciones/evaluaciones/')
     let data = res.data
     data = data.filter(dato => dato.tipo_trabajo === "COTEJO")
     console.log(data);

@@ -6,7 +6,7 @@ const TareasDes = () => {
     let [tareas, setTareas] = useState([])
 
     let getData = async () => {
-        let res = await axios.get('http://127.0.0.1:8000/api/desarrollados/desarrollados/')
+        let res = await axios.get('https://portafolio-progra-back.herokuapp.com/api/desarrollados/desarrollados/')
         let data = res.data
         data = data.filter(dato => dato.tipo_trabajo === "TAREAS")
         console.log(data);

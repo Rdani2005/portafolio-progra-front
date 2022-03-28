@@ -11,7 +11,7 @@ const ComplementView = () => {
 
 
     let getData = async () => {
-        const res = await axios.get(`http://127.0.0.1:8000/api/complementarios/complementarios/complementario/${id}/`)
+        const res = await axios.get(`https://portafolio-progra-back.herokuapp.com/api/complementarios/complementarios/complementario/${id}/`)
         let data = res.data
         console.log(data);
         setComplemento(data)

@@ -8,7 +8,7 @@ const EnunciadoProyecto = () => {
   let [proyectos, setProyectos] = useState([])
 
   let getData = async () => {
-    let res = await axios.get('http://127.0.0.1:8000/api/enunciados/enunciados/')
+    let res = await axios.get('https://portafolio-progra-back.herokuapp.com/api/enunciados/enunciados/')
     let data = res.data
     data = data.filter(dato => dato.tipo_enunciado === "PROJECT")
     console.log(data);

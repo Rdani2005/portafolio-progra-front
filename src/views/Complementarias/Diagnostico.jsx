@@ -7,7 +7,7 @@ const Diagnostico = () => {
     let [diagnosticos, setDiagnosticos] = useState([])
 
     let getData = async () => {
-        let res = await axios.get('http://127.0.0.1:8000/api/complementarios/complementarios/')
+        let res = await axios.get('https://portafolio-progra-back.herokuapp.com/api/complementarios/complementarios/')
         let data = res.data
         data = data.filter(dato => dato.tipo_trabajo === "DIAGNOSTICO")
         console.log(data);

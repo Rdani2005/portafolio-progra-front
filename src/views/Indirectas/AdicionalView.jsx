@@ -11,7 +11,7 @@ const AdicionalView = () => {
 
 
   let getData = async () => {
-    const res = await axios.get(`http://127.0.0.1:8000/api/indirectas/indirectas/indirecta/${id}/`)
+    const res = await axios.get(`https://portafolio-progra-back.herokuapp.com/api/indirectas/indirectas/indirecta/${id}/`)
     let data = res.data
     console.log(data);
     setIndirecta(data)

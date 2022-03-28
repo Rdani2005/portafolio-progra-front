@@ -9,7 +9,7 @@ const EnunciadosView = () => {
     let [enunciado, setEnunciado] = useState([])
 
     let getData = async () => {
-        const res = await axios.get(`http://127.0.0.1:8000/api/enunciados/enunciados/enunciado/${id}/`)
+        const res = await axios.get(`https://portafolio-progra-back.herokuapp.com/api/enunciados/enunciados/enunciado/${id}/`)
         let data = res.data
         console.log(data);
         setEnunciado(data)
