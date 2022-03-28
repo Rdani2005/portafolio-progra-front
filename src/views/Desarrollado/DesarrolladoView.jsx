@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import axios from 'axios'
-
+import VistaObjetos from '../../components/VistaObjetos'
 const DesarrolladoView = () => {
 
     let [desarrollado, setDesarrollado] = useState([])
@@ -18,19 +18,7 @@ const DesarrolladoView = () => {
     useEffect(() => { getData() }, [])
 
     return (
-        <main className="d-flex justify-content-center align-items-center flex-column p-5 bg-dark text-center min-vh-100">
-            <section className="container mt-5">
-                <img src={desarrollado.direccion_imagen} alt="" />
-            </section>
-            <h1 className="display-1 mt-5">{desarrollado.titulo}</h1>
-
-            <section className="container mt-5 display-5">
-                {desarrollado.descripcion}
-            </section>
-            <section className="d-flex justify-content-center align-items-center flex-column p-5 text-center"> 
-                <a href={desarrollado.direccion} className="button">Descargar Archivos</a>
-            </section>
-        </main>
+        <VistaObjetos imagen={desarrollado.direccion_imagen} titulo={desarrollado.titulo} descripcion={desarrollado.descripcion} direccion={desarrollado.direccion}/>
     )
 }
 

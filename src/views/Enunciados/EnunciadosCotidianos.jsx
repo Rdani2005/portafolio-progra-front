@@ -29,7 +29,7 @@ const EnunciadosCotidianos = () => {
             return (
               <Cards
                 key={index}
-                imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
+                imagen={cotidiano.imagen}
                 titulo={cotidiano.titulo}
                 contenido={cotidiano.descripcion}
                 link={`/enunciados/enunciado/${cotidiano.id}`}

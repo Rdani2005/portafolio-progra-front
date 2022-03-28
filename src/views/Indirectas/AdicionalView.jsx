@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
+import Retroceso from '../../components/Retroceso'
 const AdicionalView = () => {
 
   const { id } = useParams()
-  const navigate = useNavigate()
 
   let [indirecta, setIndirecta] = useState([])
 
@@ -30,13 +30,7 @@ const AdicionalView = () => {
       <section className="container mt-5 display-5">
         {indirecta.descripcion}
       </section>
-      <section className="container mt-5">
-        <div className="d-flex justify-content-center align-items-center">
-          <button onClick={() => navigate(-1)} className="button mx-4">Anterior</button>
-          <Link to="/" className="button mx-4">Home</Link>
-          <a href={indirecta.direccion} className="button mx-4">Descargar Archivos</a>
-        </div>
-      </section>
+      <Retroceso link={indirecta.direccion}></Retroceso>
     </main>
   )
 }

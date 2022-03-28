@@ -52,3 +52,7 @@ a:hover {
 .w-90 {
     width: 90%;
 }
+
+.main-bg-color {
+    background-color: var(--main-color);
+}

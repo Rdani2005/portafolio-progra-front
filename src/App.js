@@ -3,6 +3,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // ------------------- Components ----------------------------------
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 // --------------------- Views --------------------------------------
 // Main Views
 import Home from './views/Home'
@@ -74,6 +75,7 @@ const App = () => {
                 <Route path='/complementos/diagnostico' element={<Diagnostico />} />
                 <Route path='/complementos/archivos/:id' element={<ComplementView />} />
             </Routes>
+            <Footer/>
         </BrowserRouter>
 
     )

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 // CSS
 import '../css/Navbar.css';
 // Aditional Components
-import { SidebarData } from './SidebarData'
+import { SidebarData } from './Data/SidebarData'
 
 const Navbar = () => {
 

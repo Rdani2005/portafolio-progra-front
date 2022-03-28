@@ -1,30 +1,27 @@
 import React from 'react'
 
 import Cards from '../components/Cards'
+import { EvaluacionesData } from '../components/Data/EvaluacionesData'
+
+import Titulo from '../components/Titulo'
+import HomeButton from '../components/HomeButton'
 
 const Evaluaciones = () => {
     return (
         <main className="d-flex justify-content-center align-items-center flex-column p-5 bg-dark min-vh-100 text-center">
-            <h1 className="display-1 mt-5">Evaluaciones</h1>
-            <section className="mt-5">
-                <h3>Aqui se enseñan las evaluaciones realizadas </h3>
-            </section>
+            <Titulo titulo="Evaluaciones" descripcion="Aqui se enseñan las evaluaciones realizadas "/>
             <section className="container mt-5">
                 <div className="row">
-                    <Cards
-                        imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
-                        titulo="Pruebas"
-                        contenido="aquí encontrarás las pruebas desarrolladas por el estudiante!"
-                        link="/evaluacion/pruebas"
-                    />
-                    <Cards
-                        imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
-                        titulo="Hojas de Cotejo"
-                        contenido="Aqui se encuentra las hojas de calificación del estudiante!"
-                        link="/evaluacion/cotejos"
-                    />
+                    {
+                        EvaluacionesData.map((directa, index) => {
+                            return (
+                                <Cards key={index} imagen={directa.imagen} titulo={directa.titulo} contenido={directa.contenido} link={directa.link} />
+                            )
+                        })
+                    }
                 </div>
             </section>
+            <HomeButton></HomeButton>
         </main>
     )
 }

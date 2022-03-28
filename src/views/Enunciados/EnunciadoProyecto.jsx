@@ -31,7 +31,7 @@ const EnunciadoProyecto = () => {
             return (
               <Cards
                 key={index}
-                imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
+                imagen={proyecto.imagen}
                 titulo={proyecto.titulo}
                 contenido={proyecto.descripcion}
                 link={`/enunciados/enunciado/${proyecto.id}`}

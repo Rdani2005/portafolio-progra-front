@@ -2,7 +2,7 @@ import React from 'react'
 
 import Cards from '../components/Cards'
 
-import { DirectasData } from '../components/DirectasData'
+import { DirectasData } from '../components/Data/DirectasData'
 const Directas = () => {
     return (
         <main className="d-flex justify-content-center align-items-center flex-column p-5 bg-dark text-center">

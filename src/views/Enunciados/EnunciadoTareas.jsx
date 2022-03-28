@@ -27,7 +27,7 @@ const EnunciadoTareas = () => {
                         return (
                             <Cards
                                 key={index}
-                                imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
+                                imagen={tarea.imagen}
                                 titulo={tarea.titulo}
                                 contenido={tarea.descripcion}
                                 link={`/enunciados/enunciado/${tarea.id}`}

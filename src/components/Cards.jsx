@@ -6,7 +6,7 @@ const Cards = ({ imagen, titulo, contenido, link }) => {
     return (
 
         <div className="col-lg-4 mb-4">
-            <div className="card bg-transparent glass">
+            <div className="card bg-transparent glass text-center">
                 <img src={imagen} alt={titulo} className="card-img-top w-90 mx-auto rounded-3 mt-3" />
                 <div className="card-body">
 
