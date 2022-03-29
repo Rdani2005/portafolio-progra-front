@@ -9,20 +9,26 @@ const EvaluacionesViews = () => {
 
   let [evaluacion, setEvaluacion] = useState([])
 
+  useEffect(() => {
 
-  let getData = async () => {
-    const res = await axios.get(`https://portafolio-progra-back.herokuapp.com/api/evaluaciones/evaluaciones/evaluacion/${id}/`)
-    let data = res.data
-    console.log(data);
-    setEvaluacion(data)
-  }
+    let getData = async () => {
+      const res = await axios.get(`https://portafolio-progra-back.herokuapp.com/api/evaluaciones/evaluaciones/evaluacion/${id}/`)
+      let data = res.data
+      console.log(data);
+      setEvaluacion(data)
+    }
 
-  useEffect(() => { getData() }, [id])
+    getData()
+  }, [id])
+
+
+
+
 
 
 
   return (
-      <VistaObjetos imagen={evaluacion.direccion_imagen} titulo={evaluacion.titulo} descripcion={evaluacion.decripcion} direccion={evaluacion.direccion}></VistaObjetos>
+    <VistaObjetos imagen={evaluacion.direccion_imagen} titulo={evaluacion.titulo} descripcion={evaluacion.decripcion} direccion={evaluacion.direccion}></VistaObjetos>
   )
 }
 

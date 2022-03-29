@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import axios from 'axios'
+// import axios from 'axios'
 
 import Retroceso from '../../components/Retroceso'
 const AdicionalView = () => {
@@ -9,15 +9,20 @@ const AdicionalView = () => {
 
   let [indirecta, setIndirecta] = useState([])
 
+  useEffect(() => {
+    let getData = async () => {
+      const res = await fetch(`https://portafolio-progra-back.herokuapp.com/api/indirectas/indirectas/indirecta/${id}/`)
+      let data = await res.json()
+      console.log(data);
+      setIndirecta(data)
+    }
 
-  let getData = async () => {
-    const res = await axios.get(`https://portafolio-progra-back.herokuapp.com/api/indirectas/indirectas/indirecta/${id}/`)
-    let data = res.data
-    console.log(data);
-    setIndirecta(data)
-  }
+    getData()
+  }, [id])
 
-  useEffect(() => { getData() }, [id])
+
+
+
 
 
   return (

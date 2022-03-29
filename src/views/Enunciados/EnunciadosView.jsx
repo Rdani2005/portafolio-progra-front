@@ -10,19 +10,18 @@ const EnunciadosView = () => {
 
     let [enunciado, setEnunciado] = useState([])
 
-    let getData = async () => {
-        const res = await axios.get(`https://portafolio-progra-back.herokuapp.com/api/enunciados/enunciados/enunciado/${id}/`)
-        let data = res.data
-        console.log(data);
-        setEnunciado(data)
-    }
-
     useEffect(() => {
+        let getData = async () => {
+            const res = await axios.get(`https://portafolio-progra-back.herokuapp.com/api/enunciados/enunciados/enunciado/${id}/`)
+            let data = res.data
+            console.log(data);
+            setEnunciado(data)
+        }
         getData()
     }, [id])
 
     return (
-        <VistaObjetos imagen={enunciado.imagen} titulo={enunciado.titulo} descripcion={enunciado.decripcion} direccion={enunciado.direccion}/>
+        <VistaObjetos imagen={enunciado.imagen} titulo={enunciado.titulo} descripcion={enunciado.decripcion} direccion={enunciado.direccion} />
     )
 }
 

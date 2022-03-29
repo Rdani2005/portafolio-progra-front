@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import axios from 'axios'
+// import axios from 'axios'
 import VistaObjetos from '../../components/VistaObjetos'
 const ComplementView = () => {
 
@@ -9,19 +9,25 @@ const ComplementView = () => {
     let [complemento, setComplemento] = useState([])
 
 
-    let getData = async () => {
-        const res = await axios.get(`https://portafolio-progra-back.herokuapp.com/api/complementarios/complementarios/complementario/${id}/`)
-        let data = res.data
-        console.log(data);
-        setComplemento(data)
-    }
+    useEffect(() => {
+
+        let getComplement = async () => {
+            const res = await fetch(`https://portafolio-progra-back.herokuapp.com/api/complementarios/complementarios/complementario/${id}/`)
+            let data = await res.json()
+            console.log(data);
+            setComplemento(data)
+        }
+
+        getComplement()
+    }, [id])
 
 
-    useEffect(() => { getData() }, [id])
+
+
 
 
     return (
-        <VistaObjetos imagen={complemento.direccion_imagen} titulo={complemento.titulo} descripcion={complemento.descripcion} direccion={complemento.direccion}/>
+        <VistaObjetos imagen={complemento.direccion_imagen} titulo={complemento.titulo} descripcion={complemento.descripcion} direccion={complemento.direccion} />
     )
 }
 

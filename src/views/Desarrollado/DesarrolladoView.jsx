@@ -7,18 +7,20 @@ const DesarrolladoView = () => {
     let [desarrollado, setDesarrollado] = useState([])
     let { id } = useParams()
 
+    useEffect(() => {
 
-    const getData = async () => {
-        const res = await axios.get(`https://portafolio-progra-back.herokuapp.com/api/desarrollados/desarrollados/desarrollado/${id}/`)
-        let data = res.data
-        console.log(data);
-        setDesarrollado(data)
-    }
+        const getData = async () => {
+            const res = await axios.get(`https://portafolio-progra-back.herokuapp.com/api/desarrollados/desarrollados/desarrollado/${id}/`)
+            let data = res.data
+            console.log(data);
+            setDesarrollado(data)
+        }
 
-    useEffect(() => { getData() }, [])
+        getData()
+    }, [id])
 
     return (
-        <VistaObjetos imagen={desarrollado.direccion_imagen} titulo={desarrollado.titulo} descripcion={desarrollado.descripcion} direccion={desarrollado.direccion}/>
+        <VistaObjetos imagen={desarrollado.direccion_imagen} titulo={desarrollado.titulo} descripcion={desarrollado.descripcion} direccion={desarrollado.direccion} />
     )
 }
 
