@@ -11,6 +11,8 @@ import Directas from './views/Directas'
 import Indirectas from './views/Indirectas'
 import Evaluaciones from './views/Evaluaciones'
 import Complementarias from './views/Complementarias'
+// Not found view
+import NotFound from './views/NotFound'
 // Complementarias
 import Diagnostico from './views/Complementarias/Diagnostico'
 import ComplementView from './views/Complementarias/ComplementView'
@@ -74,8 +76,10 @@ const App = () => {
                 <Route path='/complementos/proyecto' element={<TrabajoProyecto />} />
                 <Route path='/complementos/diagnostico' element={<Diagnostico />} />
                 <Route path='/complementos/archivos/:id' element={<ComplementView />} />
+                {/* Not found route */}
+                <Route path="*" element={<NotFound />} />
             </Routes>
-            <Footer/>
+            <Footer />
         </BrowserRouter>
 
     )
