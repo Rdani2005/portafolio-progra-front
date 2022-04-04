@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Cards from '../../components/Cards'
+import HomeButton from '../../components/HomeButton'
+
 const CotidianosDes = () => {
 
     let [cotidianos, setCotidianos] = useState([])
@@ -36,6 +38,8 @@ const CotidianosDes = () => {
                     })}
                 </div>
             </section>
+            <HomeButton />
+
         </main>
     )
 }

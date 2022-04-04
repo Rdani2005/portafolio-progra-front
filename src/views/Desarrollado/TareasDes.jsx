@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Cards from '../../components/Cards'
+import HomeButton from '../../components/HomeButton'
 
 const TareasDes = () => {
     let [tareas, setTareas] = useState([])
@@ -37,6 +38,8 @@ const TareasDes = () => {
                     })}
                 </div>
             </section>
+            <HomeButton />
+
         </main>
     )
 }

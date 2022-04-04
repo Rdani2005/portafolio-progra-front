@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Cards from '../../components/Cards'
 
+import HomeButton from '../../components/HomeButton'
+
+
 const Clase = () => {
 
   let [clases, setClases] = useState([])
@@ -38,6 +41,7 @@ const Clase = () => {
           })}
         </div>
       </section>
+      <HomeButton />
     </main>
   )
 }

@@ -21,7 +21,7 @@ const EnunciadosView = () => {
     }, [id])
 
     return (
-        <VistaObjetos imagen={enunciado.imagen} titulo={enunciado.titulo} descripcion={enunciado.decripcion} direccion={enunciado.direccion} />
+        <VistaObjetos imagen={enunciado.imagen} titulo={enunciado.titulo} descripcion={enunciado.descripcion} direccion={enunciado.direccion} />
     )
 }
 

@@ -2,6 +2,8 @@ import React from 'react'
 
 import Cards from '../components/Cards'
 
+import HomeButton from '../components/HomeButton'
+
 import { DirectasData } from '../components/Data/DirectasData'
 const Directas = () => {
     return (
@@ -27,6 +29,7 @@ const Directas = () => {
                     }
                 </div>
             </section>
+            <HomeButton />
         </main>
     )
 }

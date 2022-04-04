@@ -10,7 +10,7 @@ import { HomeData } from '../components/Data/HomeData'
 const Home = () => {
   return (
     <main className="bg-dark min-vh-100 d-flex justify-content-center align-items-center p-5 flex-column">
-      <section>
+
         <div className="container mt-5">
           <div className="glass">
             <div className="row">
@@ -42,7 +42,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+
       <section className="container mt-5">
         <div className="row">
           {

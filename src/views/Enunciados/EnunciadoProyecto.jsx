@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import HomeButton from '../../components/HomeButton'
 
 import Cards from '../../components/Cards'
 
@@ -40,6 +41,8 @@ const EnunciadoProyecto = () => {
           })}
         </div>
       </section>
+      <HomeButton />
+
     </main>
   )
 }

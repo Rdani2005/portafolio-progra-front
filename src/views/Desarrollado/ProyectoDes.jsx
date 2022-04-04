@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Cards from '../../components/Cards'
+import HomeButton from '../../components/HomeButton'
 
 const ProyectoDes = () => {
     let [proyectos, setProyectos] = useState([])
@@ -34,6 +35,8 @@ const ProyectoDes = () => {
                         )
                     })}
                 </div>
+                <HomeButton />
+
             </section>
         </main>
     )
