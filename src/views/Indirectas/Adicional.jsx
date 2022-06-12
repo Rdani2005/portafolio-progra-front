@@ -29,7 +29,7 @@ const Adicional = () => {
             return (
               <Cards
                 key={index}
-                imagen="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg"
+                imagen={adicional.direccion_imagen}
                 titulo={adicional.titulo}
                 contenido={adicional.descripcion}
                 link={`/indirectas/archivo/${adicional.id}`}
