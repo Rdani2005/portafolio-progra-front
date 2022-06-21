@@ -45,6 +45,6 @@ export const DirectasData = [
         imagen: "https://codigoonclick.com/wp-content/uploads/2018/02/mejores-lenguajes-de-programacion-2018-1024x614.jpg",
         titulo: "Codigos Ejemplo",
         contenido: "Aqui veremos todos codigos entregados por el profesor!",
-        link: "/"
+        link: "/directas/ejemplos"
     }
 ]

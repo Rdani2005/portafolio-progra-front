@@ -36,6 +36,9 @@ import EnunciadosView from './views/Enunciados/EnunciadosView'
 import EnunciadoTareas from './views/Enunciados/EnunciadoTareas'
 import EnunciadoProyecto from './views/Enunciados/EnunciadoProyecto'
 import EnunciadosCotidianos from './views/Enunciados/EnunciadosCotidianos'
+// Codigos ejemplos
+import CodigosEjemplos from './views/Ejemplos/CodigosEjemplos'
+import Ejemplo from './views/Ejemplos/Ejemplo'
 // CSS
 import './css/app.css'
 
@@ -76,6 +79,9 @@ const App = () => {
                 <Route path='/complementos/proyecto' element={<TrabajoProyecto />} />
                 <Route path='/complementos/diagnostico' element={<Diagnostico />} />
                 <Route path='/complementos/archivos/:id' element={<ComplementView />} />
+                {/* Codigos Ejemplo */}
+                <Route path='/directas/ejemplos' element={<CodigosEjemplos />} />
+                <Route path='/directas/ejemplos/:id' element={<Ejemplo />} />
                 {/* Not found route */}
                 <Route path="*" element={<NotFound />} />
             </Routes>
